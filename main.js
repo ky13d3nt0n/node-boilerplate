@@ -30,7 +30,7 @@ const serveAssets = () => {
 
 /**
  * @function createListener
- * @description creates a listener on the specified port or path
+ * @description Creates a listener on the specified port or path
  */
 const createListener = () => {
   server.listen( port, address );
@@ -44,7 +44,7 @@ const createListener = () => {
  * @description "listening" event triggered
  */
 const serverListening = () => {
-  console.info( `Server:: Listening at ${ address }:${ port }` );
+  console.info( `Server:: Listening at: http://${ address }:${ port }` );
 };
 
 
