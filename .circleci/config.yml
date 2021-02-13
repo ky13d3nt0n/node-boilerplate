@@ -1,0 +1,41 @@
+version: 2.1
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# Orbs
+#
+orbs:
+  node: circleci/node@1.1.6
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# Jobs
+#
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run:
+                name: Install Dependencies
+                command: npm ci
+            - save_cache:
+                name: Save Package Cache
+                key: npm-packages-{{ checksum "package.json" }}
+                paths:
+                  - ~/.cache/npm
+            - run:
+                name: Lint & Test
+                command: npm run lint
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# Workflows
+#
+workflows:
+    build-and-test:
+      jobs:
+        - build-and-test
