@@ -1,0 +1,23 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Theme CSS
+ *
+ * ----------------------------------------------------------------------------- */
+
+/* Utilities */
+@import 'utilities/all.css';
+
+/* Base */
+@import 'base/all.css';
+
+/* Custom Styles */
+.g-col.primary {
+  width: calc( 70% - (72px - (72px / 2)) );
+  margin-left: 72px;
+  padding-left: 72px;
+  border-left: 2px solid var( --color-dove-gray );
+}
+
+.secondary {
+
+}

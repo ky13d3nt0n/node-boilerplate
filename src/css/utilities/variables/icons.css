@@ -1,0 +1,33 @@
+:root {
+  --icon-pi-hole: '\e90f';
+  --icon-arrow: '\e901';
+  --icon-moon: '\e912';
+  --icon-cloud1: '\e910';
+  --icon-news: '\e902';
+  --icon-basketball-hoop: '\e903';
+  --icon-basketball-hoop1: '\e904';
+  --icon-basketball: '\e905';
+  --icon-basketball1: '\e906';
+  --icon-basketball2: '\e907';
+  --icon-basketball3: '\e908';
+  --icon-baseball-set: '\e909';
+  --icon-baseball-set1: '\e90a';
+  --icon-baseball: '\e90b';
+  --icon-baseball1: '\e90c';
+  --icon-hockey-sticks: '\e90d';
+  --icon-hockey-stick: '\e90e';
+  --icon-chevron-right: '\eaeb';
+  --icon-chevron-left: '\eaec';
+  --icon-chevron-down: '\eaed';
+  --icon-chevron-up: '\eaee';
+  --icon-cloud: '\e911';
+  --icon-close: '\ea0f';
+  --icon-sun: '\e9d4';
+  --icon-moon-o: '\e913';
+  --icon-newspaper-o: '\e900';
+  --icon-chevron-right1: '\eaef';
+  --icon-chevron-left1: '\eaf0';
+  --icon-chevron-down1: '\eaf1';
+  --icon-chevron-up1: '\eaf2';
+  --icon-snapchat-ghost: '\e914';
+}

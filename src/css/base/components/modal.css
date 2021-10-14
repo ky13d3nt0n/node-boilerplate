@@ -1,0 +1,46 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Component: Modal
+ *
+ * ----------------------------------------------------------------------------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal--active {
+  display: block;
+}
+
+.modal__overlay {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  background-color: var( --color-white );
+}
+
+.modal__container {
+  display: flex;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal__content {
+  position: relative;
+  z-index: 1000;
+  width: calc( 100vw - 130px );
+  height: 90vh;
+  border-radius: 8px;
+  background-color: var( --color-abbey );
+}

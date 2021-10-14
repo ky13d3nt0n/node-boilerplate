@@ -1,0 +1,29 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Variables: Colors
+ *
+ * ----------------------------------------------------------------------------- */
+
+:root {
+  /* Black & White */
+  --color-white: rgb( 255, 255, 255 );
+  --color-black: rgb( 0, 0, 0 );
+
+  /* Neutral */
+  --color-neutral-light: rgb( 240, 241, 245 );
+  --color-neutral-medium: rgb( 81, 82, 96 );
+  --color-neutral-dark: rgb( 38, 38, 38 );
+
+  /* Theme Colors */
+  --color-primary: rgb( 1, 87, 255 );
+  --color-secondary: rgb( 0, 69, 205 );
+  --color-tertiary: rgb( 20, 54, 66 );
+  --color-silver-chalice: #aaa;
+  --color-dove-gray: #666;
+  --color-dusty-gray: #999;
+  --color-abbey: #4c4f56;
+
+  /* Background Colors */
+  --background-light: rgb( 255, 255, 255 );
+  --background-dark: rgb( 38, 38, 38 );
+}

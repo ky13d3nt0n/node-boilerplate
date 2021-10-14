@@ -1,0 +1,99 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Core
+ *
+ * This file is just a clearing-house.
+ * Make partials (start with an underscore) for any actual css code.
+ *
+ * ----------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: var( --color-black );
+  color: var( --color-white );
+  font-family: var( --font-primary );
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* -----------------------------------------------------------------------------
+ *
+ * App
+ *
+ * ----------------------------------------------------------------------------- */
+.app {
+  position: relative;
+  padding: 60px 72px;
+}
+
+.app__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.app__dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  padding: 24px 16px;
+  border: 0;
+  border-radius: 6px;
+  background-color: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 0 1rem 0 rgba( 0, 0, 0, 0.2 );
+  cursor: pointer;
+  backdrop-filter: blur( 5px );
+
+  .dark-mode & {
+    background-color: rgba( 0, 0, 0, 0.5 );
+  }
+}
+
+.app__dark-mode-toggle .icon {
+  border: 0;
+  color: var( --color-dove-gray );
+  font-size: 40px;
+}
+
+/* -----------------------------------------------------------------------------
+ *
+ * Header, Footer, Body
+ *
+ * ----------------------------------------------------------------------------- */
+
+
+/* -----------------------------------------------------------------------------
+ *
+ * Header
+ *
+ * ----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+ *
+ * Main
+ *
+ * ----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+ *
+ * Footer
+ *
+ * ----------------------------------------------------------------------------- */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

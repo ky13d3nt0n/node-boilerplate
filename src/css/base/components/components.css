@@ -1,0 +1,110 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Components
+ *
+ * ----------------------------------------------------------------------------- */
+.component {
+  margin-bottom: 60px;
+  padding: 24px 16px;
+  border-radius: 6px;
+  background-color: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 0 1rem 0 rgba( 0, 0, 0, 0.2 );
+  backdrop-filter: blur( 5px );
+
+  &.dark-mode {
+    background-color: rgba( 0, 0, 0, 0.5 );
+  }
+}
+
+.component + .component {
+  margin-top: 60px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Header
+ * ----------------------------------------------------------------------------- */
+.component-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.component-header .icon {
+  margin-right: 32px;
+  padding: 16px;
+  border: 2px solid var( --color-dusty-gray );
+  border-radius: 4px;
+  font-size: rem( 48px );
+
+  &::before {
+    color: var( --color-dusty-gray );
+  }
+}
+
+.component-header.dark-mode .icon {
+  border-color: var( --color-whtie );
+
+  &::before {
+    color: var( --color-white );
+  }
+}
+
+.component-header__info {
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var( --color-dove-gray );
+
+  .dark-mode & {
+    border-color: var( --color-white );
+  }
+}
+
+.component-header__title {
+  color: var( --color-dove-gray );
+  font-size: rem( 16px );
+  font-weight: bold;
+  text-transform: uppercase;
+
+  .dark-mode & {
+    color: var( --color-white );
+  }
+}
+
+.component-header__description {
+  float: left;
+  color: var( --color-dove-gray );
+  font-size: rem( 20px );
+
+  .dark-mode & {
+    color: var( --color-white );
+  }
+}
+
+.component-header__description + .component-header__description {
+  float: right;
+}
+
+.header--right .component-header {
+  text-align: right;
+}
+
+.header--right .component-header__description {
+  float: right;
+}
+
+.header--right .component-header__description + .component-header__description {
+  float: left;
+}
+
+/* -----------------------------------------------------------------------------
+ * Footer
+ * ----------------------------------------------------------------------------- */
+.component-footer {
+
+}

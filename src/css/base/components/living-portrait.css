@@ -1,0 +1,19 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Component: Living Portrait
+ *
+ * ----------------------------------------------------------------------------- */
+
+.living-portrait__form {
+  margin-bottom: 16px;
+}
+
+.living-portrait__video {
+  width: 100%;
+}
+
+.living-portrait__video.--fullscreen {
+  &::-webkit-media-controls {
+    display: none;
+  }
+}

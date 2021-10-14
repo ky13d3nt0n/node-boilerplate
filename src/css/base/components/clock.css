@@ -1,0 +1,114 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Component: Clock
+ *
+ * ----------------------------------------------------------------------------- */
+.component--clock {
+
+}
+
+/* -----------------------------------------------------------------------------
+ *
+ * Defaults
+ *
+ * ----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+ * Date
+ * ----------------------------------------------------------------------------- */
+.clock__date {
+  display: grid;
+  grid-template-areas: 'day comma . month . date . year';
+  grid-template-columns: min-content min-content 12px min-content 6px min-content 6px min-content;
+  margin-bottom: 12px;
+  color: var( --color-dusty-gray );
+  font-size: rem( 32px );
+  font-weight: var( --font-weight-light );
+  line-height: lh( 32, 36 );
+
+  .dark-mode & {
+    color: var( --color-white );
+  }
+}
+
+.clock__date-day {
+  grid-area: day;
+}
+
+.clock__date-comma {
+  grid-area: comma;
+}
+
+.clock__date-month {
+  grid-area: month;
+}
+
+.clock__date-date {
+  grid-area: date;
+}
+
+.clock__date-year {
+  grid-area: year;
+}
+
+/* -----------------------------------------------------------------------------
+ * Time
+ * ----------------------------------------------------------------------------- */
+.clock__time {
+  display: grid;
+  grid-template-areas:
+    'hour . colon . minute . second'
+    'hour . colon . minute . meridiam';
+  grid-template-columns: min-content 0 min-content 0 min-content 10px min-content;
+  grid-template-rows: 50% 50%;
+  color: var( --color-dove-gray );
+  font-size: rem( 96px );
+  font-weight: var( --font-weight-thin );
+  line-height: rem( 96, 96 );
+
+  .dark-mode & {
+    color: var( --color-white );
+  }
+}
+
+.clock__time-hour {
+  grid-area: hour;
+}
+
+.clock__time-colon {
+  position: relative;
+  top: -6px;
+  grid-area: colon;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.clock__time-minute {
+  grid-area: minute;
+}
+
+.clock__time-second {
+  grid-area: second;
+  align-self: end;
+  color: var( --color-dove-gray );
+  font-size: rem( 40px );
+  font-weight: var( --font-weight-light );
+  line-height: lh( 40, 44 );
+
+  .dark-mode & {
+    color: var( --color-white );
+  }
+}
+
+.clock__time-meridiam {
+  grid-area: meridiam;
+  color: var( --color-dove-gray );
+  font-size: rem( 40px );
+  font-weight: var( --font-weight-light );
+  line-height: lh( 40, 44 );
+  text-transform: uppercase;
+
+  .dark-mode & {
+    color: var( --color-white );
+  }
+}

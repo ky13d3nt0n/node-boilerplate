@@ -1,0 +1,20 @@
+/* -----------------------------------------------------------------------------
+ *
+ * Component: Icon
+ *
+ * ----------------------------------------------------------------------------- */
+[ class^='icon-' ],
+[ class*=' icon-' ] {
+  @mixin icomoon;
+
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.component--icon {
+  color: var( --color-dusty-gray );
+
+  &.dark-mode {
+    color: var( --color-white );
+  }
+}
