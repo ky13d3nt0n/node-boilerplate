@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?bipysr');
+  src:  url('fonts/icomoon.eot?bipysr#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bipysr') format('truetype'),
+    url('fonts/icomoon.woff?bipysr') format('woff'),
+    url('fonts/icomoon.svg?bipysr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pi-hole:before {
+  content: "\e90f";
+}
+.icon-arrow:before {
+  content: "\e901";
+}
+.icon-moon:before {
+  content: "\e912";
+}
+.icon-cloud1:before {
+  content: "\e910";
+}
+.icon-news:before {
+  content: "\e902";
+}
+.icon-basketball-hoop:before {
+  content: "\e903";
+}
+.icon-basketball-hoop1:before {
+  content: "\e904";
+}
+.icon-basketball:before {
+  content: "\e905";
+}
+.icon-basketball1:before {
+  content: "\e906";
+}
+.icon-basketball2:before {
+  content: "\e907";
+}
+.icon-basketball3:before {
+  content: "\e908";
+}
+.icon-baseball-set:before {
+  content: "\e909";
+}
+.icon-baseball-set1:before {
+  content: "\e90a";
+}
+.icon-baseball:before {
+  content: "\e90b";
+}
+.icon-baseball1:before {
+  content: "\e90c";
+}
+.icon-hockey-sticks:before {
+  content: "\e90d";
+}
+.icon-hockey-stick:before {
+  content: "\e90e";
+}
+.icon-chevron-right:before {
+  content: "\eaeb";
+}
+.icon-chevron-left:before {
+  content: "\eaec";
+}
+.icon-chevron-down:before {
+  content: "\eaed";
+}
+.icon-chevron-up:before {
+  content: "\eaee";
+}
+.icon-cloud:before {
+  content: "\e911";
+}
+.icon-close:before {
+  content: "\ea0f";
+}
+.icon-sun:before {
+  content: "\e9d4";
+}
+.icon-moon-o:before {
+  content: "\e913";
+}
+.icon-newspaper-o:before {
+  content: "\e900";
+}
+.icon-chevron-right1:before {
+  content: "\eaef";
+}
+.icon-chevron-left1:before {
+  content: "\eaf0";
+}
+.icon-chevron-down1:before {
+  content: "\eaf1";
+}
+.icon-chevron-up1:before {
+  content: "\eaf2";
+}
+.icon-snapchat-ghost:before {
+  content: "\e914";
+}

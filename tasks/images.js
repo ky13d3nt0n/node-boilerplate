@@ -1,28 +1,51 @@
 /**
- * @module Gulp - Image Tasks
- * @description Image Tasks
+ * @module Gulp - Images
+ * @description Optimize our images
  */
 import gulp from 'gulp';
+// import imagemin, { mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import webp from 'gulp-webp';
 import avif from 'gulp-avif';
 
 /**
- * @function convertToWebp
- * @description Convert to webp format
+ * @function optimizeImages
+ * @description Optimize various image formats
  */
-export const convertToWebp = () => gulp.src( [ 'web/content/themes/framework/assets/img/**/*.png', 'web/content/themes/framework/assets/img/**/*.jpg' ] )
-  .pipe( gulp.dest( 'web/content/themes/framework/production/img' ) )
-  .pipe( gulp.src( [ 'web/content/themes/framework/production/img/**/*.png', 'web/content/themes/framework/production/img/**/*.jpg' ] ) )
-  .pipe( webp() )
-  .pipe( gulp.dest( 'web/content/themes/framework/production/img/' ) );
-
+export const optimizeImages = () => gulp.src( [
+  'src/images/**/*.jpg',
+  'src/images/**/*.png',
+  'src/images/**/*.svg'
+] )
+  // .pipe( imagemin( [
+  //   mozjpeg( { quality: 75, progressive: true } ),
+  //   optipng( { optimizationLevel: 5 } ),
+  //   svgo( {
+  //     plugins: [
+  //       {
+  //         name: 'removeViewBox',
+  //         active: true
+  //       },
+  //       {
+  //         name: 'cleanupIDs',
+  //         active: false
+  //       }
+  //     ]
+  //   } )
+  // ], { verbose: true } ) )
+  .pipe( gulp.dest( '.' ) );
 
 /**
- * @function convertToAvif
- * @description Convert to webp format
+ * @function convertWebp
+ * @description Convert our images to webp, do png first in cases where jpg can be optimized
  */
-export const convertToAvif = () => gulp.src( [ 'web/content/themes/framework/assets/img/**/*.png', 'web/content/themes/framework/assets/img/**/*.jpg' ] )
-  .pipe( gulp.dest( 'web/content/themes/framework/production/img' ) )
-  .pipe( gulp.src( [ 'web/content/themes/framework/production/img/**/*.png', 'web/content/themes/framework/production/img/**/*.jpg' ] ) )
+export const convertWebp = () => gulp.src( [ './dist/img/**/*.png', './dist/img/**/*.jpg' ] )
+  .pipe( webp() )
+  .pipe( gulp.dest( './dist/img' ) );
+
+/**
+ * @function convertAvif
+ * @description Convert our images to avif, do png first in cases where jpg can be optimized
+ */
+export const convertAvif = () => gulp.src( [ './dist/img/**/*.png', './dist/img/**/*.jpg' ] )
   .pipe( avif() )
-  .pipe( gulp.dest( 'web/content/themes/framework/production/img/' ) );
+  .pipe( gulp.dest( './dist/img' ) );

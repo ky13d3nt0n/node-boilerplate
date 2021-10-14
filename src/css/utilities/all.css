@@ -3,12 +3,8 @@
  * Utilities
  *
  * This file is just a clearing-house.
- * Make partials (start with an underscore) for any actual css code.
  *
  * ----------------------------------------------------------------------------- */
-
-/* Reset */
-@import 'reset/reset.css';
 
 /* Media Queries */
 @import 'media-queries/media-queries.css';

@@ -11,10 +11,10 @@ import ejs from 'gulp-ejs';
 import htmlmin from 'gulp-htmlmin';
 
 /**
- * @function minifyHTML
+ * @function minifyHTMLutil
  * @description Minify HTML
  */
-export const minifyHTML = ( src = [], dest = './dist' ) => gulp.src( src )
+export const minifyHTMLutil = ( src = [], dest = './dist' ) => gulp.src( src )
   .pipe( ejs( {
     templates: path.resolve( './src/templates' )
   } ) )

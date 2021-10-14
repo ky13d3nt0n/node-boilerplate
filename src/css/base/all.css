@@ -3,11 +3,11 @@
  * Base
  *
  * This file is just a clearing-house.
- * Make partials (start with an underscore) for any actual css code.
  *
  * ----------------------------------------------------------------------------- */
 
 /* Core */
+@import 'core/normalize.css';
 @import 'core/reset.css';
 @import 'core/core.css';
 
@@ -28,19 +28,6 @@
 @import 'layouts/weighted.css';
 
 /* Components */
-@import 'components/components.css';
-@import 'components/notification.css';
-@import 'components/modal.css';
-@import 'components/stack.css';
-@import 'components/icon.css';
-@import 'components/clock.css';
-@import 'components/pihole.css';
-@import 'components/weather.css';
-@import 'components/weather-icons/style.css';
-@import 'components/news.css';
-@import 'components/sports.css';
-@import 'components/living-portrait.css';
-@import 'components/the-movie-database.css';
 
 /* Helpers */
 @import 'helpers/a11y.css';

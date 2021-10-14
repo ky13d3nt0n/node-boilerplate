@@ -11,7 +11,7 @@ import del from 'del';
  */
 export const cleanAssets = async ( done ) => {
   const assets = [
-    ''
+    'dist'
   ];
 
   const deletedPaths = await del( assets );
@@ -27,7 +27,7 @@ export const cleanAssets = async ( done ) => {
  */
 export const cleanIcons = async ( done ) => {
   const assets = [
-    'css/utilities/icons.css'
+    'src/css/utilities/variables/icons.css'
   ];
 
   const deletedPaths = await del( assets );

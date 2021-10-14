@@ -6,9 +6,13 @@ import gulp from 'gulp';
 import path from 'path';
 import notify from 'gulp-notify';
 
-import { minifyHTML } from './utils/html.js';
-import { minifyCSS } from './utils/css.js';
-import { minifyJS } from './utils/js.js';
+import { minifyHTMLutil } from './utils/html.js';
+import { minifyCSSutil } from './utils/css.js';
+import { minifyJSutil } from './utils/js.js';
+
+// Webpack Config
+// import assetWebpackConfig from '../webpack/asset.js';
+import globalWebpackConfig from '../webpack/global.js';
 
 /**
  * @function sendNotification
@@ -36,7 +40,7 @@ export const watchHTML = () => gulp.watch( [ 'src/**/*.ejs' ] ).on( 'change', ( 
   const dest = getAssetDirectory( file );
   sendNotification( file );
 
-  return minifyHTML( file, dest );
+  return minifyHTMLutil( file, dest );
 } );
 
 
@@ -54,7 +58,7 @@ export const watchCSS = () => gulp.watch( [ 'src/css/**/*.css' ] ).on( 'change',
   const dest = getAssetDirectory( file );
   sendNotification( file );
 
-  return minifyCSS( file, dest );
+  return minifyCSSutil( file, dest );
 } );
 
 /* -----------------------------------------------------------------------------
@@ -71,5 +75,5 @@ export const watchJS = () => gulp.watch( [ 'src/js/**/*.js' ] ).on( 'change', ( 
   const dest = getAssetDirectory( file );
   sendNotification( file );
 
-  return minifyJS( file, dest );
+  return minifyJSutil( file, dest, globalWebpackConfig );
 } );

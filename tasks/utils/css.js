@@ -3,8 +3,9 @@
  * @description Shared CSS Tasks
  */
 import gulp from 'gulp';
-import rename from 'gulp-rename';
 import path from 'path';
+import rename from 'gulp-rename';
+import sourcemaps from 'gulp-sourcemaps';
 
 // CSS
 import cssnano from 'gulp-cssnano';
@@ -21,14 +22,15 @@ import postcssFunctions from 'postcss-functions';
 import * as functions from '../../src/css/utilities/functions/functions.js';
 
 /**
- * @function minifyCSS
+ * @function minifyCSSutil
  * @description Minify CSS
  */
-export const minifyCSS = ( src = [], dest = './dist/css', extname = '.css' ) => gulp.src( src )
+export const minifyCSSutil = ( src = [], dest = './dist/css', extname = '.css' ) => gulp.src( src )
   .pipe( aliases( {
     '@utils': path.resolve( './src/css/utilities' ),
     '@templates': path.resolve( './src/templates' )
   } ) )
+  .pipe( sourcemaps.init() )
   .pipe(
     postcss( [
       postcssImport(),
@@ -41,6 +43,8 @@ export const minifyCSS = ( src = [], dest = './dist/css', extname = '.css' ) => 
       autoprefixer( { cascade: false } )
     ] )
   )
-  .pipe( cssnano( { zindex: false } ) )
+  .pipe( gulp.dest( dest ) )
+  .pipe( cssnano( { zindex: false, discardComments: { removeAll: true } } ) )
   .pipe( rename( { extname } ) )
+  .pipe( sourcemaps.write( '.' ) )
   .pipe( gulp.dest( dest ) );

@@ -1,6 +1,8 @@
-/**
- * Media Queries
- */
+/* -----------------------------------------------------------------------------
+ *
+ * Utils: Media Queries
+ *
+ * ----------------------------------------------------------------------------- */
 @custom-media --small ( min-width: 576px );
 @custom-media --medium ( min-width: 768px );
 @custom-media --full ( min-width: 960px );

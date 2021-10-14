@@ -9,12 +9,12 @@ import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 
 /**
- * @function minifyJS
+ * @function minifyJSutil
  * @description Minify JS
  */
-export const minifyJS = ( src = [], dest = '.', config ) => gulp.src( src )
+export const minifyJSutil = ( src = [], dest = '.', config ) => gulp.src( src )
   .pipe( webpackStream( config ), webpack, ( err, stats ) => {
-  /* Use stats to do more things if needed */
+    /* Use stats to do more things if needed */
     console.log( stats.toString( { colors: true } ) );
   } )
   .pipe( gulp.dest( dest ) );

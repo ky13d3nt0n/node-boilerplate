@@ -24,8 +24,9 @@ app.get( '/', ( req, res ) => {
  * @description Serve up our necessary assets
  */
 const serveAssets = () => {
-  app.use( '/css', express.static( path.resolve( './css' ) ) );
-  app.use( '/js', express.static( path.resolve( './js' ) ) );
+  app.use( '/css', express.static( path.resolve( './dist/css' ) ) );
+  app.use( '/js', express.static( path.resolve( './dist/js' ) ) );
+  app.use( '/', express.static( path.resolve( './dist/' ) ) );
 };
 
 /**

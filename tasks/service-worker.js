@@ -5,23 +5,22 @@
 import workbox from 'workbox-build';
 
 /**
- * @function workbox__generateServiceWorker
+ * @function generateServiceWorker
  * @description
  */
-export const serviceWorker = () => workbox.generateSW( {
+export const generateServiceWorker = () => workbox.generateSW( {
   globDirectory: './',
   globPatterns: [
-    'web/content/public/wp-content/themes/framework/assets/img/**/*.png',
-    // 'assets/img/**/*.ico',
-    // 'assets/img/**/*.svg',
-    // 'assets/img/**/*.jpg',
+    // 'img/**/*.ico',
+    // 'img/**/*.svg',
+    // 'img/**/*.jpg',
     // 'site.webmanifest',
     // 'manifest.json',
-    'web/content/themes/framework/assets/fonts/icomoon/style.css',
-    'web/content/themes/framework/assets/fonts/icomoon/fonts/icomoon.eot',
-    'web/content/themes/framework/assets/fonts/icomoon/fonts/icomoon.svg',
-    'web/content/themes/framework/assets/fonts/icomoon/fonts/icomoon.ttf',
-    'web/content/themes/framework/assets/fonts/icomoon/fonts/icomoon.woff'
+    'src/fonts/icomoon/style.css',
+    'src/fonts/icomoon/fonts/icomoon.eot',
+    'src/fonts/icomoon/fonts/icomoon.svg',
+    'src/fonts/icomoon/fonts/icomoon.ttf',
+    'src/fonts/icomoon/fonts/icomoon.woff'
   ],
   runtimeCaching: [
     {
@@ -29,7 +28,7 @@ export const serviceWorker = () => workbox.generateSW( {
       handler: 'StaleWhileRevalidate'
     }
   ],
-  swDest: './service-worker.js',
+  swDest: './dist/service-worker.js',
   clientsClaim: true,
   skipWaiting: true
 } ).then( ( { warnings } ) => {

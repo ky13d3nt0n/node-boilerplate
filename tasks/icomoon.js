@@ -6,14 +6,14 @@ import css from 'css';
 import fs from 'fs';
 import path from 'path';
 
-const iconStylesheet = path.resolve( './web/content/themes/framework/assets/css/utilities/variables/icons.css' );
+const iconStylesheet = path.resolve( './src/css/utilities/variables/icons.css' );
 
 /**
  * @function parseIcons
  * @description Parse the icomoon stylesheet
  */
 export const parseIcons = ( done ) => {
-  const stylesheet = path.resolve( './web/content/themes/framework/assets/fonts/icomoon/style.css' );
+  const stylesheet = path.resolve( './src/fonts/icomoon/style.css' );
   const options = {
     silent: false,
     source: stylesheet
